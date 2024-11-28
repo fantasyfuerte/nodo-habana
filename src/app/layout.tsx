@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Image from "next/image";
+import Nav from "./components/nav-global";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +15,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="fixed w-full h-24 top-0 bg-gradient-to-b from-sky-50"></div>
+        <div className="flex justify-center h-[356px] -mt-44">
+          <Image
+            src="/logo.jpg"
+            width={550}
+            height={200}
+            alt="logo image"
+            className="object-cover object-top"
+          />
+        </div>
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }
