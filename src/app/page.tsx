@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <section className="">
-      <article className="shadow-2xl pb-16">
+    <section className="h-screen">
+      <article className="shadow-custom pb-16">
         <h1 className="text-center text-2xl font-semibold py-8 mt-10">
           Un espacio de conexiones culturales
         </h1>
