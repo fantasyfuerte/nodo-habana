@@ -30,13 +30,7 @@ export default function Home() {
       <StyledArticle
         title="Nuestro centro"
         subtitle="Un lugar mágico"
-        paragraph="impulsando el talento local y ofreciendo una plataforma accesible y
-          dinámica donde la creatividad se desarrolla y toma forma. En Nodo
-          Habana, creemos en el poder de la cultura como motor de transformación
-          social, combinando tradición y modernidad para generar eimpulsando el talento local y ofreciendo una plataforma accesible y
-          dinámica donde la creatividad se desarrolla y toma forma. En Nodo
-          Habana, creemos en el poder de la cultura como motor de transformación
-          social, combinando tradición y modernidad para generar e"
+        paragraph="En el corazón del Malecón habanero, Nodo Habana se erige como un espacio vibrante donde la tradición y la innovación se entrelazan. Este proyecto de desarrollo local no solo revitaliza el entorno urbano, sino que también fomenta la colaboración comunitaria, impulsando el crecimiento cultural y económico de la zona. Aquí, cada rincón cuenta una historia, y cada iniciativa es una chispa que enciende el espíritu creativo de La Habana. Nodo Habana es más que un centro, es un punto de encuentro donde las ideas cobran vida y la magia de la ciudad se renueva día a día."
         imgs={["balcon.jpeg"]}
       />
     </section>
