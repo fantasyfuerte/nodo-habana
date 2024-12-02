@@ -1,3 +1,5 @@
 export default function Page() {
-  return <h1>Hola mundo</h1>;
+  return <section className="h-screen">
+
+  </section>;
 }
