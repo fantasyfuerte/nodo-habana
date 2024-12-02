@@ -1,7 +1,9 @@
+import StyledArticle from "./components/StyledArticle";
+
 export default function Home() {
   return (
-    <section className="h-screen">
-      <article className="shadow-custom pb-16">
+    <section className="">
+      <article className="shadow-custom pb-16 mb-36">
         <h1 className="text-center text-2xl font-semibold py-8 mt-10">
           Un espacio de conexiones culturales
         </h1>
@@ -25,6 +27,18 @@ export default function Home() {
           </strong>
         </p>
       </article>
+      <StyledArticle
+        title="Nuestro centro"
+        subtitle="Un lugar mágico"
+        paragraph="impulsando el talento local y ofreciendo una plataforma accesible y
+          dinámica donde la creatividad se desarrolla y toma forma. En Nodo
+          Habana, creemos en el poder de la cultura como motor de transformación
+          social, combinando tradición y modernidad para generar eimpulsando el talento local y ofreciendo una plataforma accesible y
+          dinámica donde la creatividad se desarrolla y toma forma. En Nodo
+          Habana, creemos en el poder de la cultura como motor de transformación
+          social, combinando tradición y modernidad para generar e"
+        imgs={["balcon.jpeg"]}
+      />
     </section>
   );
 }
