@@ -9,28 +9,28 @@ export default function Nav() {
   return (
     <div className="flex justify-center gap-1 mt-2 ">
       <Link
-        href="/shows"
+        href="/cartelera"
         className={`w-20 font-semibold hover:opacity-70 hover:scale-105 transition text-center ${
           path.includes("/shows") && "text-indigo-950"
         }`}
       >
-        Shows
+        Cartelera
       </Link>
       <Link
         href="/"
-        className={`w-20 border-x-2 border-sky-200 font-semibold hover:opacity-70 hover:scale-105 transition text-center ${
+        className={`w-24 border-x-2 border-sky-200 font-semibold hover:opacity-70 hover:scale-105 transition text-center ${
           path == "/" && "text-indigo-950"
         }`}
       >
-        Inicio
+        Principal
       </Link>
       <Link
-        href="/menu"
+        href="/servicios"
         className={`font- w-20 font-semibold hover:opacity-70 hover:scale-105 transition text-center ${
           path.includes("/menu") && "text-indigo-950"
         }`}
       >
-        Menu
+        Servicios
       </Link>
     </div>
   );
