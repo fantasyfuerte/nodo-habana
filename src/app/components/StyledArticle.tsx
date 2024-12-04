@@ -18,7 +18,7 @@ const StyledArticle: React.FC<Props> = ({
   id,
 }) => {
   return (
-    <article id={id} className="flex max-h-max flex-wrap items-end mb-48 ">
+    <article id={id} className="flex max-h-max flex-wrap items-end">
       <div className="basis-6/12 flex-grow  pr-4 md:pr-0 pl-4 mb-7 ">
         <h5 className="text-4xl min-w-max md:text-5xl">
           {title}: <br></br>

@@ -27,8 +27,7 @@ export default function Home() {
           </p>
         </article>
       </section>
-      <div className="w-full h-14 bg-gradient-to-t from-blue-600"></div>
-      <section className="bg-blue-600">
+      <section className="bg-color-blue">
         <StyledArticle
           title="Nuestro centro"
           subtitle="Un lugar mágico"
