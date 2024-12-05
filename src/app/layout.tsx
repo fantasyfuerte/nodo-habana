@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Image from "next/image";
 import Nav from "./components/nav-global";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Nodo Habana",
@@ -39,9 +40,12 @@ export default function RootLayout({
             </span>
             <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
               <li>
-                <a href="#" className="hover:underline me-4 md:me-6">
+                <Link
+                  href="/#about-us"
+                  className="hover:underline me-4 md:me-6"
+                >
                   About
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:underline me-4 md:me-6">

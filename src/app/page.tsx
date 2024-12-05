@@ -3,11 +3,11 @@ import ArticlesList from "./components/ArticlesList";
 export default function Home() {
   return (
     <>
-      <section>
-        <h1 className="text-center text-2xl font-semibold mb-16 py-5">
+      <section id="about-us">
+        <h1  className="text-center text-2xl font-semibold mb-16 py-5">
           Un espacio de conexiones culturales
         </h1>
-        <article className="mb-36 py-5">
+        <article className="mb-36 py-5" >
           <h3 className="text-center text-xl font-semibold mb-3">
             ¿Quiénes somos?
           </h3>
