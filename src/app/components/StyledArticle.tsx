@@ -19,7 +19,7 @@ const StyledArticle: React.FC<Props> = ({
 }) => {
   return (
     <article id={id} className="flex max-h-max flex-wrap items-end">
-      <div className="basis-6/12 flex-grow  pr-4 md:pr-0 pl-4 mb-7 ">
+      <div className="basis-6/12 flex-grow pr-4 md:pr-0 pl-4 mb-7">
         <h5 className="text-4xl min-w-max md:text-5xl">
           {title}: <br></br>
           <strong className="text-gray-950 ">{subtitle}</strong>
@@ -28,7 +28,7 @@ const StyledArticle: React.FC<Props> = ({
           {paragraph}
         </p>
       </div>
-      <div className="basis-5/12 flex-grow h-96 px-2 md:p-5 pb-0 select-none">
+      <div className="basis-5/12 flex-grow h-[400px] px-2  select-none">
         <Image
           alt="imagen del articulo"
           src={img}

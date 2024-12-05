@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="fixed w-full h-20 top-0 bg-gradient-to-b from-sky-50"></div>
-        <div className="flex mx-auto w-[550px] h-[356px] -mt-44 select-none">
+        <div className="flex mx-auto max-w-[550px] h-[360px] -mt-44 select-none">
           <Image
             src="/logo.jpg"
             width={550}
