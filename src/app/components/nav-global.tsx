@@ -7,7 +7,7 @@ export default function Nav() {
   const path = usePathname();
 
   return (
-    <div className="flex justify-center gap-1 mt-2 ">
+    <div className="flex justify-center gap-1 mt-2 select-none">
       <Link
         href="/cartelera"
         className={`w-20 font-semibold hover:opacity-70 hover:scale-105 transition text-center ${

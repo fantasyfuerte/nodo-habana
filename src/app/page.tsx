@@ -1,13 +1,15 @@
 import ArticlesList from "./components/ArticlesList";
+import SocialLinks from "./components/SocialLinks";
 
 export default function Home() {
   return (
     <>
       <section id="about-us">
-        <h1  className="text-center text-2xl font-semibold mb-16 py-5">
+        <h1 className="text-center text-2xl font-semibold mb-16 py-5 select-none">
           Un espacio de conexiones culturales
         </h1>
-        <article className="mb-36 py-5" >
+        <SocialLinks/>
+        <article className="mb-36 py-5">
           <h3 className="text-center text-xl font-semibold mb-3">
             ¿Quiénes somos?
           </h3>

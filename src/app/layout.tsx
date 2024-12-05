@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="selection:bg-indigo-300">
         <div className="fixed w-full h-20 top-0 bg-gradient-to-b from-sky-50"></div>
         <div className="flex mx-auto max-w-[550px] h-[360px] -mt-44 select-none">
           <Image
