@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <section className="">
-        <article className="shadow-custom pb-16 mb-36">
+        <article className="pb-16 mb-36">
           <h1 className="text-center text-2xl font-semibold py-8 mt-10">
             Un espacio de conexiones culturales
           </h1>
@@ -16,10 +16,7 @@ export default function Home() {
             propósito es ser un punto de encuentro para artistas, creadores y
             emprendedores,<br></br>
             impulsando el talento local y ofreciendo una plataforma accesible y
-            dinámica donde la creatividad se desarrolla y toma forma. En Nodo
-            Habana, creemos en el poder de la cultura como motor de
-            transformación social, combinando tradición y modernidad para
-            generar experiencias significativas.
+            dinámica donde la creatividad se desarrolla y toma forma.
             <br></br>
             <strong className="md:text-[19px]">
               Únete y sé parte del latido que impulsa La Habana.
@@ -32,7 +29,8 @@ export default function Home() {
           title="Nuestro centro"
           subtitle="Un lugar mágico"
           paragraph="En el corazón del Malecón habanero, Nodo Habana se erige como un espacio vibrante donde la tradición y la innovación se entrelazan. Este proyecto de desarrollo local no solo revitaliza el entorno urbano, sino que también fomenta la colaboración comunitaria, impulsando el crecimiento cultural y económico de la zona. Aquí, cada rincón cuenta una historia, y cada iniciativa es una chispa que enciende el espíritu creativo de La Habana. Nodo Habana es más que un centro, es un punto de encuentro donde las ideas cobran vida y la magia de la ciudad se renueva día a día."
-          img={"/balcon.jpeg"}
+          img={"/fachada.jpeg"}
+          centerImg={true}
         />
       </section>
     </>
