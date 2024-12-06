@@ -9,7 +9,7 @@ export default function SocialLinks() {
     <article>
       <ul className="flex gap-2 justify-center">
         {links.map((link, index) => (
-          <li key={index}>
+          <li key={index} className="hover:opacity-65 transition-opacity">
             <Link href={link.url}>
               <img alt={link.alt} width={20} height={20} src={link.img} />
             </Link>
