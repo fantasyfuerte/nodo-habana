@@ -2,7 +2,6 @@ const links = [
   { img: "/social/instagram.svg", url: "https://www.instagram.com/nodo.habana", alt: "Instagram logo" },
   { img: "/social/facebook.svg", url: "https://www.facebook.com/share/kpYVar11M26NXYz7", alt: "Facebook logo" },
 ];
-import Link from "next/link";
 
 export default function SocialLinks() {
   return (
