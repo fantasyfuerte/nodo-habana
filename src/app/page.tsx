@@ -13,7 +13,7 @@ export default function Home() {
           <h3 className="text-center text-xl font-semibold mb-3">
             ¿Quiénes somos?
           </h3>
-          <p className="text-center px-14 text-md md:text-lg text-gray-800 first-letter:ml-10">
+          <p className="text-center px-2 md:px-14 text-md md:text-lg text-gray-800 first-letter:ml-10">
             Bienvenido a Nodo Habana, un espacio dedicado a la promoción
             cultural en el Malecón, donde el arte, la creatividad y la
             colaboración
