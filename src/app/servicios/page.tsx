@@ -1,5 +1,3 @@
 export default function Page() {
-  return <section className="h-screen">
-
-  </section>;
+  return <main className="h-screen"></main>;
 }

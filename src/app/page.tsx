@@ -3,7 +3,7 @@ import SocialLinks from "./components/SocialLinks";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <section id="about-us">
         <h1 className="text-center text-2xl font-semibold mb-2 py-5 select-none">
           Un espacio de conexiones culturales
@@ -29,6 +29,6 @@ export default function Home() {
         </article>
       </section>
       <ArticlesList />
-    </>
+    </main>
   );
 }
