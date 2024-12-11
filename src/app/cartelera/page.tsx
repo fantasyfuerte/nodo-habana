@@ -5,9 +5,10 @@ const eventArticles = [
       "Parrafo de ejemplo con poca importancia visual. Aqui se explica el evento en menos de tres líneas.",
     time: ["8:00PM", "11:00PM"],
     date: "Lunes 16 de Diciembre",
-    img: "./fachada.jpeg",
+    img: "/fachada.jpeg",
   },
 ];
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -29,12 +30,12 @@ export default function Page() {
               </ul>
             </div>
             <div>
-              <img
+              <Image
                 width={50}
                 height={50}
                 src={img}
                 alt="Imagen del articulo"
-              ></img>
+              ></Image>
             </div>
           </article>
         ))}
