@@ -11,7 +11,7 @@ export default function Nav() {
       <Link
         href="/cartelera"
         className={`w-20 font-semibold hover:opacity-70 hover:scale-105 transition text-center ${
-          path.includes("/shows") && "text-indigo-950"
+          path.includes("/cartelera") && "text-indigo-950 "
         }`}
       >
         Cartelera
@@ -19,7 +19,7 @@ export default function Nav() {
       <Link
         href="/"
         className={`w-24 border-x-2 border-sky-200 font-semibold hover:opacity-70 hover:scale-105 transition text-center ${
-          path == "/" && "text-indigo-950"
+          path == "/" && "text-indigo-950 "
         }`}
       >
         Principal
@@ -27,7 +27,7 @@ export default function Nav() {
       <Link
         href="/servicios"
         className={`font- w-20 font-semibold hover:opacity-70 hover:scale-105 transition text-center ${
-          path.includes("/menu") && "text-indigo-950"
+          path.includes("/servicios") && "text-indigo-950 "
         }`}
       >
         Servicios
