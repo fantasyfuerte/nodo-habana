@@ -8,7 +8,7 @@ const eventArticles = [
     img: "/fachada.jpeg",
   },
 ];
-import Image from "next/image";
+import EventArticle from "./ui/Event";
 
 export default function Page() {
   return (
@@ -17,27 +17,8 @@ export default function Page() {
         Próximos eventos
       </h1>
       <section className="flex justify-around flex-wrap">
-        {eventArticles.map(({ title, paragraph, time, date, img }, index) => (
-          <article key={index}>
-            <div>
-              <h3>{title}</h3>
-              <p>{paragraph}</p>
-              <ul>
-                <li>
-                  Horario:{time[0]} - {time[1]}
-                </li>
-                <li>Fecha:{date}</li>
-              </ul>
-            </div>
-            <div>
-              <Image
-                width={50}
-                height={50}
-                src={img}
-                alt="Imagen del articulo"
-              ></Image>
-            </div>
-          </article>
+        {eventArticles.map((event, index) => (
+          <EventArticle {...event} key={index} />
         ))}
       </section>
     </main>

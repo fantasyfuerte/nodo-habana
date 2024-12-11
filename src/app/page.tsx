@@ -1,5 +1,5 @@
-import ArticlesList from "./components/ArticlesList";
-import SocialLinks from "./components/SocialLinks";
+import ArticlesList from "./ui/ArticlesList";
+import SocialLinks from "./ui/SocialLinks";
 
 export default function Home() {
   return (

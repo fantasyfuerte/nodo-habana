@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Image from "next/image";
-import Nav from "./components/nav-global";
-import { Footer } from "./components/Footer";
+import Nav from "./ui/nav-global";
+import { Footer } from "./ui/Footer";
 
 export const metadata: Metadata = {
   title: "Nodo Habana",
