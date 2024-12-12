@@ -10,21 +10,28 @@ interface Props {
 
 export default function Event({ title, paragraph, time, date, img }: Props) {
   return (
-    <article>
-      <div>
-        <h3>{title}</h3>
-        <p>{paragraph}</p>
-        <ul>
+    <article className="flex justify-between p-2 w-[45%] select-none">
+      <div className="text-[19px] basis-2/3">
+        <h3 className="font-semibold">{title}</h3>
+        <p className="font-normal text-gray-600">{paragraph}</p>
+        <ul className="mt-5">
           <li>
-            Horario:{time[0]} - {time[1]}
+            <span className="font-normal text-gray-600">Horario: </span>
+            <span className="font-semibold">
+              {time[0]} - {time[1]}
+            </span>
           </li>
-          <li>Fecha:{date}</li>
+          <li>
+            <span className="font-normal text-gray-600">Fecha: </span>
+            <span className="font-semibold">{date}</span>
+          </li>
         </ul>
       </div>
-      <div>
+      <div className="basis-1/3 object-cover">
         <Image
-          width={50}
-          height={50}
+          className="rounded-md w-full"
+          width={170}
+          height={160}
           src={img}
           alt="Imagen del articulo"
         ></Image>
