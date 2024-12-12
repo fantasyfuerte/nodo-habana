@@ -13,7 +13,7 @@ const eventArticles = [
       "Parrafo de ejemplo con poca importancia visual. Aqui se explica el evento en menos de tres líneas.",
     time: ["8:00PM", "11:00PM"],
     date: "Lunes 16 de Diciembre",
-    img: "/fachada.jpeg",
+    img: "/balcon.jpeg",
   },
 ];
 import EventArticle from "./ui/Event";
@@ -21,7 +21,7 @@ import EventArticle from "./ui/Event";
 export default function Page() {
   return (
     <main className="h-screen">
-      <h1 className="text-2xl font-semibold text-center py-5">
+      <h1 className="text-2xl font-semibold text-center py-6">
         Próximos eventos
       </h1>
       <section className="flex justify-around flex-wrap">
