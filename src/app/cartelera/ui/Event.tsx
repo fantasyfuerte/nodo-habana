@@ -10,7 +10,7 @@ interface Props {
 
 export default function Event({ title, paragraph, time, date, img }: Props) {
   return (
-    <article className="flex justify-between p-2 max-w-[43%] select-none">
+    <article className="flex justify-between p-4 max-w-[43%] select-none shadow-custom-hover transition">
       <div className="text-[18.5px] basis-[60%]">
         <h3 className="font-semibold">{title}</h3>
         <p className="font-normal text-gray-600 pr-4">{paragraph}</p>

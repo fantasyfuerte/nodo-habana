@@ -5,3 +5,8 @@
 .shadow-custom {
   box-shadow: 0 5px 20px rgba(0, 54, 77, 0.293);
 }
+
+.shadow-custom-hover:hover {
+  box-shadow: 0 5px 20px rgba(0, 54, 77, 0.293);
+  transition: 0.4s;
+}
