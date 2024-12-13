@@ -9,27 +9,22 @@ export function Footer() {
           <a href="#" className="hover:underline">
             Nodo Habana™
           </a>
-          . All Rights Reserved.
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
           <li>
             <Link href="/#about-us" className="hover:underline me-4 md:me-6">
-              About
+              Sobre nosotros
             </Link>
           </li>
+
           <li>
             <a href="#" className="hover:underline me-4 md:me-6">
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline me-4 md:me-6">
-              Licensing
+              Licencia
             </a>
           </li>
           <li>
             <a href="#" className="hover:underline">
-              Contact
+              Contacto
             </a>
           </li>
         </ul>
