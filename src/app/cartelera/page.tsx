@@ -20,11 +20,11 @@ import EventArticle from "./ui/Event";
 
 export default function Page() {
   return (
-    <main className="h-screen">
-      <h1 className="text-2xl font-semibold text-center py-6">
+    <main className="h-screen select-none">
+      <h1 className="text-2xl font-semibold text-center py-5">
         Próximos eventos
       </h1>
-      <section className="flex justify-around flex-wrap">
+      <section className="flex justify-around flex-wrap py-4 px-6">
         {eventArticles.map((event, index) => (
           <EventArticle {...event} key={index} />
         ))}
