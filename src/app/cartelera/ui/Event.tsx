@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-interface Props {
+export interface Event {
   title: string;
   paragraph: string;
   time: string[];
@@ -8,7 +8,7 @@ interface Props {
   img: string;
 }
 
-export default function Event({ title, paragraph, time, date, img }: Props) {
+export default function Event({ title, paragraph, time, date, img }: Event) {
   return (
     <article className="flex justify-between p-4 mx-4 my-3 select-none shadow-custom-hover transition">
       <div className="text-[18.5px] basis-[60%]">

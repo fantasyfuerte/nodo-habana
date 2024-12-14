@@ -1,3 +1,5 @@
+import EventsSection from "./ui/EventsSection";
+
 const eventArticles = [
   {
     title: "Apertura cultural del ejemplo",
@@ -44,8 +46,6 @@ const lastEvents = [
   },
 ];
 
-import EventArticle from "./ui/Event";
-
 export default function Page() {
   return (
     <main className="select-none">
@@ -55,22 +55,14 @@ export default function Page() {
       >
         Proximamente
       </h1>
-      <section className="grid grid-cols-[repeat(2,1fr)] py-4 px-6">
-        {eventArticles.map((event, index) => (
-          <EventArticle {...event} key={index} />
-        ))}
-      </section>
+      <EventsSection events={eventArticles} />
       <h1
         className="text-2xl font-semibold text-center py-5"
         id="ultimos-eventos"
       >
         Últimos eventos
       </h1>
-      <section className="grid grid-cols-[repeat(2,1fr)] py-4 px-6">
-        {lastEvents.map((event, index) => (
-          <EventArticle {...event} key={index} />
-        ))}
-      </section>
+      <EventsSection events={lastEvents} />
     </main>
   );
 }
