@@ -15,7 +15,35 @@ const eventArticles = [
     date: "Lunes 16 de Diciembre",
     img: "/balcon.jpeg",
   },
+  {
+    title: "Apertura cultural del ejemplo",
+    paragraph:
+      "Parrafo de ejemplo con poca importancia visual. Aqui se explica el evento en menos de tres líneas.",
+    time: ["8:00PM", "11:00PM"],
+    date: "Lunes 16 de Diciembre",
+    img: "/balcon.jpeg",
+  },
 ];
+
+const lastEvents = [
+  {
+    title: "Apertura cultural del ejemplo",
+    paragraph:
+      "Parrafo de ejemplo con poca importancia visual. Aqui se explica el evento en menos de tres líneas.",
+    time: ["8:00PM", "11:00PM"],
+    date: "Lunes 16 de Diciembre",
+    img: "/balcon.jpeg",
+  },
+  {
+    title: "Apertura cultural del ejemplo",
+    paragraph:
+      "Parrafo de ejemplo con poca importancia visual. Aqui se explica el evento en menos de tres líneas.",
+    time: ["8:00PM", "11:00PM"],
+    date: "Lunes 16 de Diciembre",
+    img: "/balcon.jpeg",
+  },
+];
+
 import EventArticle from "./ui/Event";
 
 export default function Page() {
@@ -27,7 +55,7 @@ export default function Page() {
       >
         Proximamente
       </h1>
-      <section className="flex justify-around flex-wrap py-4 px-6">
+      <section className="grid grid-cols-[repeat(2,1fr)] py-4 px-6">
         {eventArticles.map((event, index) => (
           <EventArticle {...event} key={index} />
         ))}
@@ -38,8 +66,8 @@ export default function Page() {
       >
         Últimos eventos
       </h1>
-      <section className="flex justify-around flex-wrap py-4 px-6">
-        {eventArticles.map((event, index) => (
+      <section className="grid grid-cols-[repeat(2,1fr)] py-4 px-6">
+        {lastEvents.map((event, index) => (
           <EventArticle {...event} key={index} />
         ))}
       </section>
