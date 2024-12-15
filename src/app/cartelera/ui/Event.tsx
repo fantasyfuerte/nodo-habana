@@ -4,7 +4,7 @@ export interface Event {
   title: string;
   paragraph: string;
   time: string[];
-  date: string;
+  date: Date;
   img: string;
 }
 
@@ -23,7 +23,9 @@ export default function Event({ title, paragraph, time, date, img }: Event) {
           </li>
           <li>
             <span className="font-normal text-gray-600">Fecha: </span>
-            <span className="font-semibold">{date}</span>
+            <span className="font-semibold">
+              {date.getDay()} {date.getDate()} de {date.getMonth()}
+            </span>
           </li>
         </ul>
       </div>
