@@ -1,50 +1,5 @@
 import EventsSection from "./ui/EventsSection";
-
-const eventArticles = [
-  {
-    title: "Apertura cultural del ejemplo",
-    paragraph:
-      "Parrafo de ejemplo con poca importancia visual. Aqui se explica el evento en menos de tres líneas.",
-    time: ["8:00PM", "11:00PM"],
-    date: "Lunes 16 de Diciembre",
-    img: "/fachada.jpeg",
-  },
-  {
-    title: "Apertura cultural del ejemplo",
-    paragraph:
-      "Parrafo de ejemplo con poca importancia visual. Aqui se explica el evento en menos de tres líneas.",
-    time: ["8:00PM", "11:00PM"],
-    date: "Lunes 16 de Diciembre",
-    img: "/balcon.jpeg",
-  },
-  {
-    title: "Apertura cultural del ejemplo",
-    paragraph:
-      "Parrafo de ejemplo con poca importancia visual. Aqui se explica el evento en menos de tres líneas.",
-    time: ["8:00PM", "11:00PM"],
-    date: "Lunes 16 de Diciembre",
-    img: "/balcon.jpeg",
-  },
-];
-
-const lastEvents = [
-  {
-    title: "Apertura cultural del ejemplo",
-    paragraph:
-      "Parrafo de ejemplo con poca importancia visual. Aqui se explica el evento en menos de tres líneas.",
-    time: ["8:00PM", "11:00PM"],
-    date: "Lunes 16 de Diciembre",
-    img: "/balcon.jpeg",
-  },
-  {
-    title: "Apertura cultural del ejemplo",
-    paragraph:
-      "Parrafo de ejemplo con poca importancia visual. Aqui se explica el evento en menos de tres líneas.",
-    time: ["8:00PM", "11:00PM"],
-    date: "Lunes 16 de Diciembre",
-    img: "/balcon.jpeg",
-  },
-];
+import { eventArticles } from "@/app/cartelera/lib/constants";
 
 export default function Page() {
   return (
@@ -62,7 +17,7 @@ export default function Page() {
       >
         Últimos eventos
       </h1>
-      <EventsSection events={lastEvents} />
+      <EventsSection events={eventArticles} />
     </main>
   );
 }
