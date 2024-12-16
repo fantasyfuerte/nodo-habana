@@ -10,7 +10,9 @@ export interface Event {
 
 export default function Event({ title, paragraph, time, date, img }: Event) {
   return (
-    <article className="flex flex-col md:flex-row justify-between p-4 mx-4 my-3 select-none shadow-custom-hover transition">
+    <article
+      className={`flex flex-col md:flex-row justify-between p-4 mx-4 my-3 select-none shadow-custom-hover transition`}
+    >
       <div className="text-[18.5px] basis-[60%]">
         <h3 className="font-semibold">{title}</h3>
         <p className="font-normal text-gray-600 pr-4">{paragraph}</p>
