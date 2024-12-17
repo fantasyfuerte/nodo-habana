@@ -10,8 +10,9 @@ export interface Event {
 
 export default function Event({ title, paragraph, time, date, img }: Event) {
   const today = new Date();
-  const daysLeft =
-    Math.round((Date.parse(date.toString()) - Date.parse(today.toString())) / 86400000);
+  const daysLeft = Math.round(
+    (Date.parse(date.toString()) - Date.parse(today.toString())) / 86400000
+  );
 
   const isDone = daysLeft < 0;
   const relativeDate =
