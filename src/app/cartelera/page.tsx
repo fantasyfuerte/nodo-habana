@@ -10,7 +10,7 @@ export default function Page() {
       >
         Próximamente
       </h1>
-      <EventsSection events={eventArticles.reverse()} />
+      <EventsSection events={eventArticles} />
     </main>
   );
 }
