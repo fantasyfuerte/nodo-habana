@@ -8,7 +8,7 @@ export default function Page() {
         className="text-2xl font-semibold text-center pt-5 pb-2"
         id="proximos-eventos"
       >
-        Próximamente
+        Descubre y conecta con la cultura
       </h1>
       <EventsSection events={eventArticles} />
     </main>
