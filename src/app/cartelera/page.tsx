@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <main className="select-none">
       <h1
-        className="text-2xl font-semibold text-center py-5"
+        className="text-2xl font-semibold text-center pt-5 pb-2"
         id="proximos-eventos"
       >
         Próximamente

@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 
 export interface Event {
@@ -12,8 +11,7 @@ export interface Event {
 export default function Event({ title, paragraph, time, date, img }: Event) {
   return (
     <article
-      className={`flex flex-col md:flex-row justify-between p-4 mx-4 my-3 select-none shadow-custom-hover transition`}
-      onClick={() => alert("El articulo aún no está disponible")}
+      className={`flex flex-col h-[430px] md:h-auto md:flex-row justify-between p-4 mx-4 my-3 select-none shadow-custom-hover transition`}
     >
       <div className="text-[18.5px] basis-[60%]">
         <h3 className="font-semibold">{title}</h3>
@@ -35,7 +33,7 @@ export default function Event({ title, paragraph, time, date, img }: Event) {
       </div>
       <div className="basis-[40%] h-[187px]">
         <Image
-          className="rounded-md w-full h-full object-cover"
+          className="rounded-md w-full h-full object-cover pt-2 md:pt-0"
           width={390}
           height={350}
           src={img}
