@@ -10,7 +10,9 @@ export interface Event {
 
 export default function Event({ title, paragraph, time, date, img }: Event) {
   const today = new Date();
-  const daysLeft = date.getDate() - today.getDate();
+  const daysLeft =
+    Math.round((Date.parse(date.toString()) - Date.parse(today.toString())) / 86400000);
+
   const isDone = daysLeft < 0;
   const relativeDate =
     daysLeft == 0
@@ -26,7 +28,7 @@ export default function Event({ title, paragraph, time, date, img }: Event) {
   return (
     <article
       className={`${
-        isDone && "opacity-65"
+        isDone && "opacity-65 order-last"
       } flex flex-col h-[438px] md:h-auto md:flex-row justify-between p-4 mx-4 my-3 select-none shadow-custom-hover transition`}
     >
       <div className="text-[18.5px] basis-[60%]">

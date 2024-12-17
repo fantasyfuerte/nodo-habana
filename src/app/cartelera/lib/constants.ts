@@ -7,6 +7,7 @@ export const eventArticles = [
     date: new Date(2024, 11, 15),
     img: "/fachada.jpeg",
   },
+
   {
     title: "Apertura cultural del ejemplo",
     paragraph:
