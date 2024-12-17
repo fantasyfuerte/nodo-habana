@@ -9,13 +9,30 @@ export interface Event {
 }
 
 export default function Event({ title, paragraph, time, date, img }: Event) {
+  const today = new Date();
+  const isDone = today > date;
+  const daysLeft = date.getDate() - today.getDate();
+  const relativeDate =
+    daysLeft == 0
+      ? "Hoy"
+      : daysLeft == 1
+      ? "Mañana"
+      : daysLeft > 1
+      ? `Faltan ${daysLeft} días`
+      : daysLeft == -1
+      ? "Ayer"
+      : `Hace ${-daysLeft} días`;
+
   return (
     <article
-      className={`flex flex-col h-[438px] md:h-auto md:flex-row justify-between p-4 mx-4 my-3 select-none shadow-custom-hover transition`}
+      className={`${
+        isDone && "opacity-65"
+      } flex flex-col h-[438px] md:h-auto md:flex-row justify-between p-4 mx-4 my-3 select-none shadow-custom-hover transition`}
     >
       <div className="text-[18.5px] basis-[60%]">
         <h3 className="font-semibold">{title}</h3>
         <p className="font-normal text-gray-600 pr-4">{paragraph}</p>
+
         <ul className="mt-5">
           <li>
             <span className="font-normal text-gray-600">Horario: </span>
@@ -25,9 +42,7 @@ export default function Event({ title, paragraph, time, date, img }: Event) {
           </li>
           <li>
             <span className="font-normal text-gray-600">Fecha: </span>
-            <span className="font-semibold">
-              {date.getDay()} {date.getDate()} de {date.getMonth()}
-            </span>
+            <span className="font-semibold">{relativeDate}</span>
           </li>
         </ul>
       </div>
