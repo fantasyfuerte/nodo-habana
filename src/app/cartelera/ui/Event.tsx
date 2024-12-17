@@ -43,6 +43,7 @@ export default function Event({ title, paragraph, time, date, img }: Event) {
           <li>
             <span className="font-normal text-gray-600">Fecha: </span>
             <span className="font-semibold">{relativeDate}</span>
+            <span className="font-semibold">{relativeDate}</span>
           </li>
         </ul>
       </div>
