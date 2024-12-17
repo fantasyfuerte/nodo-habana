@@ -28,7 +28,7 @@ const StyledArticle: React.FC<Props> = ({
           {paragraph}
         </p>
       </div>
-      <div className="basis-5/12 flex-grow h-[400px] px-2  select-none">
+      <div className="basis-5/12 flex-grow h-[400px] px-6 select-none">
         <Image
           alt="imagen del articulo"
           src={img}
