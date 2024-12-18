@@ -4,7 +4,7 @@ Welcome to Nodo Habana, an initiative to promote culture along the Malecón Haba
 
 ## Description
 
-Nodo Habana is a digital platform designed to connect the community with the vibrant cultural scene of the Malecón Habanero. Through our website, you can:
+Nodo Habana is designed to connect the community with the vibrant cultural scene of the Malecón Habanero. Through our website, you can:
 
 - Discover cultural events and activities.
 - Explore artistic and photographic exhibitions.
@@ -16,3 +16,4 @@ Nodo Habana is a digital platform designed to connect the community with the vib
 - **Developed with NextJS**: Our website is fast, modern, and easy to navigate thanks to the power of NextJS.
 - **Intuitive Interface**: User-friendly design for easy event and activity discovery.
 - **Dynamic Content**: Constant updates with new activities and events.
+- **Gallery**: An historical gallery of event's photos
