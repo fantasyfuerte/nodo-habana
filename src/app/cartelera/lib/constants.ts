@@ -17,7 +17,7 @@ export const eventArticles = [
     img: "/balcon.jpeg",
   },
   {
-    title: "Apertura cultural del ejemplo",
+    title: "Apertura hoy cultural del ejemplo",
     paragraph:
       "Parrafo de ejemplo con poca importancia visual. Aqui se explica el evento en menos de tres líneas.",
     time: ["8:00PM", "11:00PM"],

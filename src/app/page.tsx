@@ -1,5 +1,12 @@
 import ArticlesList from "./ui/ArticlesList";
 import SocialLinks from "./ui/SocialLinks";
+import Event from "./cartelera/ui/Event";
+import { eventArticles } from "./cartelera/lib/constants";
+const today = new Date();
+
+const todayEvent = eventArticles.find(
+  (a) => a.date.getDate() == today.getDate()
+);
 
 export default function Home() {
   return (
@@ -14,13 +21,13 @@ export default function Home() {
             ¿Quiénes somos?
           </h3>
           <p className="text-center px-2 md:px-44 text-md md:text-lg text-gray-800 first-letter:ml-10">
-            Bienvenido a Nodo Habana,<br></br> un espacio dedicado a la promoción
-            cultural en el Malecón, donde el arte, la creatividad y la
+            Bienvenido a Nodo Habana,<br></br> un espacio dedicado a la
+            promoción cultural en el Malecón, donde el arte, la creatividad y la
             colaboración se encuentran para construir nuevas oportunidades.
-            Nuestro propósito es ser un punto de encuentro para
-            artistas, creadores y impulsando el talento local y ofreciendo una
-            plataforma accesible y dinámica donde la creatividad se desarrolla y
-            toma forma.<br></br>
+            Nuestro propósito es ser un punto de encuentro para artistas,
+            creadores y impulsando el talento local y ofreciendo una plataforma
+            accesible y dinámica donde la creatividad se desarrolla y toma
+            forma.<br></br>
             <br></br>
             <strong className="md:text-[19px]">
               Únete y sé parte del latido que impulsa La Habana.
@@ -28,6 +35,7 @@ export default function Home() {
           </p>
         </article>
       </section>
+      <section>{todayEvent && <Event {...todayEvent} />}</section>
       <ArticlesList />
     </main>
   );
