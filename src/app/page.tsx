@@ -3,10 +3,13 @@ import SocialLinks from "./ui/SocialLinks";
 import Event from "./cartelera/ui/Event";
 import { eventArticles } from "./cartelera/lib/constants";
 const today = new Date();
+today.setHours(0, 0, 0, 0);
 
-const todayEvent = eventArticles.find(
-  (a) => a.date.getDate() == today.getDate()
-);
+const nextEvent = eventArticles.find((event) => {
+  const eventDate = new Date(event.date);
+  eventDate.setHours(0, 0, 0, 0);
+  return eventDate >= today;
+});
 
 export default function Home() {
   return (
@@ -35,7 +38,18 @@ export default function Home() {
           </p>
         </article>
       </section>
-      <section>{todayEvent && <Event {...todayEvent} />}</section>
+      <section>
+        <h2 className="text-center text-2xl font-semibold mb-5 py-5 select-none">
+          Evento de hoy
+        </h2>
+        {nextEvent ? (
+          <Event {...nextEvent} />
+        ) : (
+          <p className="text-center text-lg font-semibold">
+            No hay eventos para hoy
+          </p>
+        )}
+      </section>
       <ArticlesList />
     </main>
   );
