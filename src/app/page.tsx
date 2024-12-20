@@ -20,7 +20,7 @@ export default function Home() {
           Un espacio de conexiones culturales
         </h1>
         <SocialLinks />
-        <article className="mb-36 py-5">
+        <article className="mb-28 py-5">
           <h3 className="text-center text-xl font-semibold mb-3">
             ¿Quiénes somos?
           </h3>
@@ -39,8 +39,11 @@ export default function Home() {
           </p>
         </article>
       </section>
-      <section id="today-event" className="bg-gray-100 p-5 rounded-lg shadow-md">
-        <h2 className="text-center text-2xl font-semibold mb-5 py-5 select-none">
+      <section
+        id="today-event"
+        className="bg-gray-100 p-10 px-20 rounded-lg shadow-md mb-10"
+      >
+        <h2 className="text-center text-2xl mb-8 font-semibold select-none">
           Evento de hoy
         </h2>
         {nextEvent ? (
