@@ -1,7 +1,7 @@
 import ArticlesList from "./ui/ArticlesList";
 import SocialLinks from "./ui/SocialLinks";
 import { eventArticles } from "./cartelera/lib/constants";
-import Image from "next/image";
+import TodayEvent from "@/app/ui/TodayEvent";
 
 const today = new Date();
 today.setHours(0, 0, 0, 0);
@@ -11,16 +11,6 @@ const nextEvent = eventArticles.find((event) => {
   eventDate.setHours(0, 0, 0, 0);
   return eventDate >= today;
 });
-
-const getRelativeDate = (date: Date) => {
-  const eventDate = new Date(date);
-  const diffTime = eventDate.getTime() - today.getTime();
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-  if (diffDays === 0) return "Hoy";
-  if (diffDays === 1) return "Mañana";
-  return eventDate.toLocaleDateString();
-};
 
 export default function Home() {
   return (
@@ -49,43 +39,7 @@ export default function Home() {
           </p>
         </article>
       </section>
-      {nextEvent && (
-        <section
-          id="today-event"
-          className="bg-gray-100 p-10 px-20 rounded-lg shadow-md mb-10"
-        >
-          <h2 className="text-center text-2xl mb-8 font-semibold select-none">
-            Evento de hoy
-          </h2>
-
-          <article className="bg-white p-6 rounded-lg shadow-lg">
-            <Image
-              width={700}
-              height={700}
-              src={nextEvent.img}
-              alt={nextEvent.title}
-              className="w-full h-64 object-cover rounded-t-lg mb-4"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-bold mb-2">{nextEvent.title}</h3>
-              <p className="text-gray-700 mb-4">{nextEvent.paragraph}</p>
-              <p className="text-gray-500">
-                Fecha:
-                <strong className="text-black">
-                  {" "}
-                  {getRelativeDate(nextEvent.date)}
-                </strong>
-              </p>
-              <p className="text-gray-500">
-                Hora:{" "}
-                <strong className="text-black">
-                  {nextEvent.time[0]}-{nextEvent.time[1]}
-                </strong>
-              </p>
-            </div>
-          </article>
-        </section>
-      )}
+      {nextEvent && <TodayEvent event={nextEvent} />}
       <ArticlesList />
     </main>
   );
