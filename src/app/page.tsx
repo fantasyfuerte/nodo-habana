@@ -30,7 +30,7 @@ export default function Home() {
           Un espacio de conexiones culturales
         </h1>
         <SocialLinks />
-        <article className="mb-28 py-5">
+        <article className="mb-20 py-5">
           <h3 className="text-center text-xl font-semibold mb-3">
             ¿Quiénes somos?
           </h3>
@@ -49,14 +49,15 @@ export default function Home() {
           </p>
         </article>
       </section>
-      <section
-        id="today-event"
-        className="bg-gray-100 p-10 px-20 rounded-lg shadow-md mb-10"
-      >
-        <h2 className="text-center text-2xl mb-8 font-semibold select-none">
-          Evento de hoy
-        </h2>
-        {nextEvent ? (
+      {nextEvent && (
+        <section
+          id="today-event"
+          className="bg-gray-100 p-10 px-20 rounded-lg shadow-md mb-10"
+        >
+          <h2 className="text-center text-2xl mb-8 font-semibold select-none">
+            Evento de hoy
+          </h2>
+
           <article className="bg-white p-6 rounded-lg shadow-lg">
             <Image
               width={700}
@@ -69,17 +70,22 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-2">{nextEvent.title}</h3>
               <p className="text-gray-700 mb-4">{nextEvent.paragraph}</p>
               <p className="text-gray-500">
-                Fecha: {getRelativeDate(nextEvent.date)}
+                Fecha:
+                <strong className="text-black">
+                  {" "}
+                  {getRelativeDate(nextEvent.date)}
+                </strong>
               </p>
-              <p className="text-gray-500">Hora: {nextEvent.time}</p>
+              <p className="text-gray-500">
+                Hora:{" "}
+                <strong className="text-black">
+                  {nextEvent.time[0]}-{nextEvent.time[1]}
+                </strong>
+              </p>
             </div>
           </article>
-        ) : (
-          <p className="text-center text-lg font-semibold">
-            No hay eventos para hoy
-          </p>
-        )}
-      </section>
+        </section>
+      )}
       <ArticlesList />
     </main>
   );
