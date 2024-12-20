@@ -45,10 +45,10 @@ const TodayEvent = ({ event }:Props) => {
           <h3 className="text-xl font-bold mb-2">{event.title}</h3>
           <p className="text-gray-700 mb-4">{event.paragraph}</p>
           <p className="text-gray-500">
-            Fecha: {getRelativeDate(event.date)}
+            Fecha: <strong className="text-black">{getRelativeDate(event.date)}</strong>
           </p>
           <p className="text-gray-500">
-            Hora: <strong>{event.time[0]} - {event.time[1]}</strong>
+            Hora: <strong className="text-black">{event.time[0]} - {event.time[1]}</strong>
           </p>
         </div>
       </article>
