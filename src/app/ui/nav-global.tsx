@@ -25,12 +25,12 @@ export default function Nav() {
         Principal
       </Link>
       <Link
-        href="/servicios"
+        href="/galeria"
         className={`font- w-20 font-semibold hover:opacity-70 hover:scale-105 transition text-center ${
-          path.includes("/servicios") && "text-indigo-950 "
+          path.includes("/galeria") && "text-indigo-950 "
         }`}
       >
-        Servicios
+        Galeria
       </Link>
     </div>
   );
