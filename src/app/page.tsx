@@ -2,6 +2,7 @@ import ArticlesList from "./ui/ArticlesList";
 import SocialLinks from "./ui/SocialLinks";
 import Event from "./cartelera/ui/Event";
 import { eventArticles } from "./cartelera/lib/constants";
+
 const today = new Date();
 today.setHours(0, 0, 0, 0);
 
@@ -38,7 +39,7 @@ export default function Home() {
           </p>
         </article>
       </section>
-      <section>
+      <section id="today-event" className="bg-gray-100 p-5 rounded-lg shadow-md">
         <h2 className="text-center text-2xl font-semibold mb-5 py-5 select-none">
           Evento de hoy
         </h2>
