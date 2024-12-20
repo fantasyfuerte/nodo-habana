@@ -1,8 +1,8 @@
 import Image from "next/image";
-import {Event} from '@/app/cartelera/ui/Event'
+import { Event } from "@/app/cartelera/ui/Event";
 
-interface Props{
-    event: Event
+interface Props {
+  event: Event;
 }
 
 const today = new Date();
@@ -16,10 +16,10 @@ const getRelativeDate = (date: Date) => {
   return eventDate.toLocaleDateString();
 };
 
-const TodayEvent = ({ event }:Props) => {
+const TodayEvent = ({ event }: Props) => {
   if (!event) {
     return (
-      <p className="text-center text-lg font-semibold">
+      <p className="text-center text-lg font-semibold text-gray-700">
         No hay eventos para hoy
       </p>
     );
@@ -28,27 +28,32 @@ const TodayEvent = ({ event }:Props) => {
   return (
     <section
       id="today-event"
-      className="bg-gray-100 p-10 px-20 rounded-lg shadow-md mb-10"
+      className="bg-white shadow-lg p-8 rounded-lg mb-24"
     >
-      <h2 className="text-center text-2xl mb-8 font-semibold select-none">
-        Evento de hoy
-      </h2>
-      <article className="bg-white p-6 rounded-lg shadow-lg">
+      <article className="flex flex-col md:flex-row items-center">
         <Image
           width={1000}
           height={1000}
           src={event.img}
           alt={event.title}
-          className="w-full h-64 object-cover rounded-t-lg mb-4"
+          className="w-full md:w-2/5 h-64 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
         />
-        <div className="p-4">
-          <h3 className="text-xl font-bold mb-2">{event.title}</h3>
-          <p className="text-gray-700 mb-4">{event.paragraph}</p>
-          <p className="text-gray-500">
-            Fecha: <strong className="text-black">{getRelativeDate(event.date)}</strong>
+        <div className="flex-1 p-4">
+          <h3 className="text-2xl font-bold mb-2 text-gray-800">
+            {event.title}
+          </h3>
+          <p className="text-gray-600 mb-4">{event.paragraph}</p>
+          <p className="text-gray-500 mb-2">
+            Fecha:{" "}
+            <strong className="text-gray-800">
+              {getRelativeDate(event.date)}
+            </strong>
           </p>
           <p className="text-gray-500">
-            Hora: <strong className="text-black">{event.time[0]} - {event.time[1]}</strong>
+            Hora:{" "}
+            <strong className="text-gray-800">
+              {event.time[0]} - {event.time[1]}
+            </strong>
           </p>
         </div>
       </article>
