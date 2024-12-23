@@ -10,6 +10,7 @@ export interface Event {
 
 export default function Event({ title, paragraph, time, date, img }: Event) {
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
   const daysLeft = Math.ceil(
     (Date.parse(date.toString()) - Date.parse(today.toString())) / 86400000
   );
@@ -29,7 +30,7 @@ export default function Event({ title, paragraph, time, date, img }: Event) {
   return (
     <article
       className={`${
-        isDone && "opacity-65 order-last"
+        isDone && "opacity-65"
       } flex flex-col h-[438px] md:h-auto md:flex-row justify-between p-4 mx-4 my-3 select-none shadow-custom-hover transition`}
     >
       <div className="text-[18.5px] basis-[60%]">

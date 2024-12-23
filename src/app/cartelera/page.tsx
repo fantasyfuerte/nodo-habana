@@ -10,7 +10,7 @@ export default function Page() {
       >
         Descubre y conecta con la cultura
       </h1>
-      <EventsSection events={eventArticles} />
+      <EventsSection allEvents={eventArticles} />
     </main>
   );
 }
