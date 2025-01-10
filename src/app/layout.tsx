@@ -25,6 +25,7 @@ export default function RootLayout({
             height={200}
             alt="logo image"
             className="object-cover object-top"
+            priority
           />
         </div>
         <Nav />
