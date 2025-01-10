@@ -1,3 +1,5 @@
+"use client";
+
 import EventArticle from "./Event";
 import { Event } from "./Event";
 
