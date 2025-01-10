@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import EventArticle from "./Event";
 import { Event } from "./Event";
 
@@ -9,13 +6,8 @@ interface Props {
 }
 
 export default function EventsSection({ allEvents }: Props) {
-  const [today, setToday] = useState(new Date());
-
-  useEffect(() => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    setToday(today);
-  }, []);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
   const events = allEvents.reverse().slice(0, 4);
 
