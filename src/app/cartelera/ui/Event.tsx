@@ -6,11 +6,11 @@ export interface Event {
   time: string[];
   date: Date;
   img: string;
+  today: Date;
 }
 
-export default function Event({ title, paragraph, time, date, img }: Event) {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+export default function Event({ title, paragraph, time, date, img,today }: Event) {
+  
   const daysLeft = Math.ceil(
     (Date.parse(date.toString()) - Date.parse(today.toString())) / 86400000
   );
