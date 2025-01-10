@@ -19,8 +19,8 @@ export default function EventsSection({ allEvents }: Props) {
 
   const events = allEvents.reverse().slice(0, 4);
 
-  const futureEvents = events.filter((event) => event.date >= today).reverse();
-  const pastEvents = events.filter((event) => event.date < today).reverse();
+  const futureEvents = events.filter((event) => event.date >= today);
+  const pastEvents = events.filter((event) => event.date < today);
   pastEvents.reverse();
 
   return (
