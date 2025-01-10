@@ -12,7 +12,7 @@ export const eventArticles = [
     paragraph:
       "Una noche de sinfonías y conciertos de compositores clásicos interpretados por la orquesta local.",
     time: ["7:00PM", "9:00PM"],
-    date: new Date(2025, 0, 10),
+    date: new Date(2025, 0, 9),
     img: "/fachada.jpeg",
   },
   {
