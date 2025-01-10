@@ -9,9 +9,9 @@ export default function EventsSection({ allEvents }: Props) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const events = allEvents.sort(
-    (a, b) => a.date.getMilliseconds() + b.date.getMilliseconds()
-  );
+  const events = allEvents
+    .sort((a, b) => a.date.getMilliseconds() + b.date.getMilliseconds())
+    .slice(0, 4);
 
   const futureEvents = events.filter((event) => event.date >= today);
   const pastEvents = events.filter((event) => event.date < today);
