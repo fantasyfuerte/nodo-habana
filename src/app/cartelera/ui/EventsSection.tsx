@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import EventArticle from "./Event";
 import { Event } from "./Event";
@@ -8,12 +8,14 @@ interface Props {
 }
 
 async function getDate() {
-  const response = await fetch("https://api.nodo-habana.com/api/date");
-  const data = await response.json();
-  return new Date(data.date);
+  return new Promise((resolve) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    resolve(today)
+  })
 }
 
-const today = await getDate()
+const today = await getDate() as Date
 
 export default function EventsSection({ allEvents }: Props) {
   const events = allEvents.reverse().slice(0, 4);
