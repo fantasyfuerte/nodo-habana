@@ -6,11 +6,20 @@ export interface Event {
   time: string[];
   date: Date;
   img: string;
+}
+
+interface Props extends Event {
   today: Date;
 }
 
-export default function Event({ title, paragraph, time, date, img,today }: Event) {
-  
+export default function Event({
+  title,
+  paragraph,
+  time,
+  date,
+  img,
+  today,
+}: Props) {
   const daysLeft = Math.ceil(
     (Date.parse(date.toString()) - Date.parse(today.toString())) / 86400000
   );
