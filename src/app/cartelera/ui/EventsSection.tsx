@@ -7,8 +7,13 @@ interface Props {
   allEvents: Event[];
 }
 
-const today = new Date();
-today.setHours(0, 0, 0, 0);
+async function getDate() {
+  const response = await fetch("https://api.nodo-habana.com/api/date");
+  const data = await response.json();
+  return new Date(data.date);
+}
+
+const today = await getDate()
 
 export default function EventsSection({ allEvents }: Props) {
   const events = allEvents.reverse().slice(0, 4);
